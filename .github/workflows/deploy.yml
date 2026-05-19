@@ -28,10 +28,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Copy Prototyp files to build directory
+        run: |
+          mkdir -p build
+          cp -r Prototyp/* build/
+          cp .nojekyll build/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: 'build'
 
       - name: Deploy to GitHub Pages
         id: deployment
