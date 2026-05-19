@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Deck - Guard Security</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .slide {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .dot {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-200 flex items-center justify-center p-4 sm:p-8 font-sans text-slate-900">
+
+    <!-- Presentation Container -->
+    <div class="w-full max-w-5xl bg-white shadow-2xl rounded-2xl overflow-hidden flex flex-col h-[700px] relative">
+        
+        <!-- Slide Content Area -->
+        <div class="flex-grow p-10 sm:p-14 overflow-hidden relative" id="slider-container">
+            
+            <!-- SLIDE 1: Title -->
+            <div class="slide absolute inset-0 p-10 sm:p-14 flex flex-col items-center justify-center text-center opacity-0 translate-x-8 hidden" id="slide-0">
+                <div class="bg-slate-900 text-white p-4 rounded-2xl mb-4">
+                    <i data-lucide="shield-check" class="text-rose-500 w-16 h-16"></i>
+                </div>
+                <h1 class="text-5xl font-extrabold text-slate-900 tracking-tight mb-6">STRATEGIE- & PITCH-DECK</h1>
+                <h2 class="text-2xl font-medium text-slate-600">Guard Security & Services GmbH</h2>
+                <div class="w-24 h-1.5 bg-rose-500 rounded-full my-8"></div>
+                <p class="text-lg text-slate-500 max-w-lg">
+                    Lückenlose Argumentationskette & strategische Vorbereitung für das Verkaufsgespräch.
+                </p>
+                <p class="font-semibold text-slate-700 bg-slate-100 px-6 py-2 rounded-full mt-8">
+                    Prepared for: Ben
+                </p>
+            </div>
+
+            <!-- SLIDE 2: Problem -->
+            <div class="slide absolute inset-0 p-10 sm:p-14 flex flex-col opacity-0 translate-x-8 hidden" id="slide-1">
+                <div class="flex items-center space-x-3 mb-8">
+                    <i data-lucide="alert-triangle" class="text-rose-500 w-8 h-8"></i>
+                    <h2 class="text-3xl font-bold text-slate-900">1. Die technische Realität (Schwachstellen)</h2>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div class="bg-rose-50 border border-rose-100 p-6 rounded-xl flex flex-col items-center text-center">
+                        <i data-lucide="clock" class="text-rose-500 w-10 h-10 mb-3"></i>
+                        <h3 class="text-4xl font-black text-slate-900 mb-1">8,4 s</h3>
+                        <p class="font-semibold text-rose-700">Mobile Ladezeit (LCP)</p>
+                        <p class="text-sm text-slate-600 mt-2">Kunden springen ab, bevor die Seite lädt. (Google Limit: 2,5s)</p>
+                    </div>
+                    
+                    <div class="bg-rose-50 border border-rose-100 p-6 rounded-xl flex flex-col items-center text-center">
+                        <i data-lucide="shield-alert" class="text-rose-500 w-10 h-10 mb-3"></i>
+                        <h3 class="text-4xl font-black text-slate-900 mb-1">HTTP 429</h3>
+                        <p class="font-semibold text-rose-700">Hintergrund-Abstürze</p>
+                        <p class="text-sm text-slate-600 mt-2">Too Many Requests. Die Wix-Architektur zwingt Handys in die Knie.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3 bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <i data-lucide="x-circle" class="text-rose-500 mt-1 flex-shrink-0 w-5 h-5"></i>
+                        <div>
+                            <p class="font-bold text-slate-900">Formelle Fehler (Trust-Killer)</p>
+                            <p class="text-sm text-slate-600">Widersprüche (UG vs. GmbH), "Du/Sie"-Wirrwarr, <code class="bg-slate-200 px-1 rounded">Screenshot...png</code> als Dateinamen.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3 bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <i data-lucide="x-circle" class="text-rose-500 mt-1 flex-shrink-0 w-5 h-5"></i>
+                        <div>
+                            <p class="font-bold text-slate-900">SEO-Blindflug</p>
+                            <p class="text-sm text-slate-600">Keine Meta-Beschreibung hinterlegt. Google zieht wahllos Textfragmente in die Suchergebnisse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: The Paradox -->
+            <div class="slide absolute inset-0 p-10 sm:p-14 flex flex-col justify-center opacity-0 translate-x-8 hidden" id="slide-2">
+                <div class="flex items-center space-x-3 mb-6">
+                    <i data-lucide="lightbulb" class="text-amber-500 w-8 h-8"></i>
+                    <h2 class="text-3xl font-bold text-slate-900">2. Das "Leck im Eimer" Paradoxon</h2>
+                </div>
+
+                <div class="bg-slate-900 text-white rounded-2xl p-8 relative overflow-hidden shadow-xl">
+                    <div class="absolute -right-10 -top-10 opacity-10">
+                        <i data-lucide="trending-up" class="w-48 h-48"></i>
+                    </div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="bg-emerald-500/20 p-3 rounded-full border border-emerald-500/30">
+                                <i data-lucide="trending-up" class="text-emerald-400 w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <p class="text-emerald-400 font-bold uppercase tracking-wider text-sm">Der einzige Lichtblick</p>
+                                <h3 class="text-2xl font-bold">Platz 3 bei Google Maps</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6 text-slate-300 text-lg">
+                            <p>
+                                Der Kunde hat extrem wertvolle Sichtbarkeit. Das Problem: Die Leute klicken im Maps-Profil auf "Website", um die Seriosität für teure B2B-Security-Jobs zu prüfen.
+                            </p>
+                            <div class="bg-rose-500/10 border-l-4 border-rose-500 p-4 rounded-r-lg">
+                                <p class="text-rose-100 font-medium">
+                                    Dann prallen sie gegen eine 8 Sekunden ladende, kaputte Wix-Seite. <br/>
+                                    <span class="text-white font-bold">Er verliert genau die Leads, die er eigentlich schon gewonnen hatte!</span>
+                                </p>
+                            </div>
+                            <p class="text-sm text-slate-400 italic">
+                                Eine "Reparatur" des Wix-Baukastens ist nutzlos. Es braucht eine Kernsanierung.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: Solution -->
+            <div class="slide absolute inset-0 p-10 sm:p-14 flex flex-col opacity-0 translate-x-8 hidden" id="slide-3">
+                <div class="flex items-center space-x-3 mb-6">
+                    <i data-lucide="crosshair" class="text-blue-600 w-8 h-8"></i>
+                    <h2 class="text-3xl font-bold text-slate-900">3. Die B2B-Vertriebsmaschine (Angebot)</h2>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm flex-grow flex flex-col h-full">
+                    <div class="grid grid-cols-12 bg-slate-100 p-4 font-bold text-slate-700 text-sm uppercase tracking-wider border-b border-slate-200">
+                        <div class="col-span-3">Modul</div>
+                        <div class="col-span-7">Nutzen für Guard Security</div>
+                        <div class="col-span-2 text-right">Invest</div>
+                    </div>
+                    
+                    <div class="overflow-y-auto flex-grow">
+                        <!-- Items -->
+                        <div class="grid grid-cols-12 p-4 border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                            <div class="col-span-3 font-semibold text-slate-900 flex items-center">Designsystem</div>
+                            <div class="col-span-7 text-sm text-slate-600 pr-4">Corporate Identity. Signalisiert B2B-Großkunden sofort absolute Professionalität und digitale Autorität.</div>
+                            <div class="col-span-2 text-right font-bold text-slate-700">3.500 €</div>
+                        </div>
+                        <div class="grid grid-cols-12 p-4 border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                            <div class="col-span-3 font-semibold text-slate-900 flex items-center">Landingpage</div>
+                            <div class="col-span-7 text-sm text-slate-600 pr-4">Ablösung von Wix. Blitzschnell (< 2s), mobile-first. Kein Code-Ballast, keine Abstürze.</div>
+                            <div class="col-span-2 text-right font-bold text-slate-700">2.200 €</div>
+                        </div>
+                        <div class="grid grid-cols-12 p-4 border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                            <div class="col-span-3 font-semibold text-slate-900 flex items-center">
+                                Web-Content <span class="ml-2 bg-blue-100 text-blue-700 text-[10px] uppercase font-bold px-1.5 py-0.5 rounded">Neu</span>
+                            </div>
+                            <div class="col-span-7 text-sm text-slate-600 pr-4">Verkaufspsychologisches Copywriting. Beseitigung der Du/Sie Fehler. Rechtssicher und vertrauensbildend.</div>
+                            <div class="col-span-2 text-right font-bold text-slate-700">1.200 €</div>
+                        </div>
+                        <div class="grid grid-cols-12 p-4 border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                            <div class="col-span-3 font-semibold text-slate-900 flex items-center">Funnel Strategy</div>
+                            <div class="col-span-7 text-sm text-slate-600 pr-4">Filtert Kleinanfragen (Partys) raus, lenkt lukrative B2B-Anfragen (Objektschutz) strukturiert zum Vertrieb.</div>
+                            <div class="col-span-2 text-right font-bold text-slate-700">1.500 €</div>
+                        </div>
+                        <div class="grid grid-cols-12 p-4 border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                            <div class="col-span-3 font-semibold text-slate-900 flex items-center">SEO Optimierung</div>
+                            <div class="col-span-7 text-sm text-slate-600 pr-4">Sichert Platz 3 bei Google Maps ab und optimiert für lukrative Nischen-Keywords.</div>
+                            <div class="col-span-2 text-right font-bold text-slate-700">1.200 €</div>
+                        </div>
+                        <div class="grid grid-cols-12 p-4 border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                            <div class="col-span-3 font-semibold text-slate-900 flex items-center">
+                                Google Ads <span class="ml-2 bg-blue-100 text-blue-700 text-[10px] uppercase font-bold px-1.5 py-0.5 rounded">Neu</span>
+                            </div>
+                            <div class="col-span-7 text-sm text-slate-600 pr-4">Fängt exakt die B2B-Kunden ab, die JETZT akut einen Sicherheitsdienst in Krefeld suchen.</div>
+                            <div class="col-span-2 text-right font-bold text-slate-700">1.500 €</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-12 bg-slate-900 text-white p-5 font-bold text-lg">
+                        <div class="col-span-10">GESAMTINVESTMENT (Schlüsselfertiges Gesamtsystem)</div>
+                        <div class="col-span-2 text-right">11.100 €</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 5: Guidelines -->
+            <div class="slide absolute inset-0 p-10 sm:p-14 flex flex-col opacity-0 translate-x-8 hidden" id="slide-4">
+                <div class="flex items-center space-x-3 mb-6">
+                    <i data-lucide="message-square" class="text-emerald-600 w-8 h-8"></i>
+                    <h2 class="text-3xl font-bold text-slate-900">4. Sales Guideline für Ben</h2>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6 h-full">
+                    <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-6 relative">
+                        <div class="absolute top-0 right-0 p-4 opacity-10"><i data-lucide="check-circle" class="w-24 h-24"></i></div>
+                        <h3 class="text-xl font-bold text-emerald-900 mb-4 border-b border-emerald-200 pb-2">Trust-Aufbau</h3>
+                        <ul class="space-y-4 text-emerald-800">
+                            <li class="flex items-start space-x-2">
+                                <span class="font-bold text-emerald-600 mt-0.5">1.</span>
+                                <span><strong>Kein Fachchinesisch:</strong> Übersetze die Fehler. "Ihr größtes Bild braucht mobil 8 Sekunden. In der Zeit ruft der Bauleiter längst die Konkurrenz an."</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="font-bold text-emerald-600 mt-0.5">2.</span>
+                                <span><strong>Maps-Validierung:</strong> Loben vor Kritisieren. "Platz 3 bei Google Maps ist Gold wert. Aber Ihre aktuelle Website lässt diese Kunden eiskalt im Regen stehen."</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50 border border-amber-100 rounded-xl p-6 relative">
+                        <h3 class="text-xl font-bold text-amber-900 mb-4 border-b border-amber-200 pb-2">Kaufhürden abbauen</h3>
+                        <ul class="space-y-4 text-amber-800">
+                            <li class="flex flex-col">
+                                <span class="font-bold text-slate-900">Hürde: "Das ist zu teuer"</span>
+                                <span class="text-sm mt-1"><strong>Hebel (CLV):</strong> "Was ist ein B2B-Auftrag wert? Die 11.100 € sind keine Kosten, sondern finanzieren sich durch einen einzigen neuen Objektschutz-Deal, der aktuell an der Wix-Seite scheitert."</span>
+                            </li>
+                            <li class="flex flex-col">
+                                <span class="font-bold text-slate-900">Hürde: "Warum Google Ads statt Social Media?"</span>
+                                <span class="text-sm mt-1"><strong>Hebel:</strong> "Social Media bringt bei Security keine B2B-Kunden. Wir setzen das Budget gezielt in Google Ads ein, um Leute abzufangen, die JETZT sofort suchen."</span>
+                            </li>
+                            <li class="flex flex-col">
+                                <span class="font-bold text-slate-900">Hürde: "Texte mache ich selbst"</span>
+                                <span class="text-sm mt-1"><strong>Hebel:</strong> "Security-Copywriting muss rechtssicher und präzise sein. Ihr aktuelles Du/Sie-Wirrwarr ist rechtlich riskant. Wir bauen Autorität für Sie auf."</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Presentation Controls Footer -->
+        <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 flex items-center justify-between z-10 relative">
+            
+            <div class="text-sm font-medium text-slate-500" id="slide-counter">
+                Slide 1 of 5
+            </div>
+
+            <div class="flex items-center space-x-2" id="dot-container">
+                <button onclick="goToSlide(0)" class="dot w-6 h-2.5 bg-rose-500 rounded-full" aria-label="Go to slide 1"></button>
+                <button onclick="goToSlide(1)" class="dot w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400 rounded-full" aria-label="Go to slide 2"></button>
+                <button onclick="goToSlide(2)" class="dot w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400 rounded-full" aria-label="Go to slide 3"></button>
+                <button onclick="goToSlide(3)" class="dot w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400 rounded-full" aria-label="Go to slide 4"></button>
+                <button onclick="goToSlide(4)" class="dot w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400 rounded-full" aria-label="Go to slide 5"></button>
+            </div>
+
+            <div class="flex items-center space-x-3">
+                <button 
+                    id="prev-btn"
+                    onclick="prevSlide()"
+                    disabled
+                    class="p-2 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100 hover:text-slate-900 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                >
+                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                </button>
+                <button 
+                    id="next-btn"
+                    onclick="nextSlide()"
+                    class="px-4 py-2 flex items-center space-x-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                >
+                    <span id="next-text">Next</span>
+                    <i data-lucide="chevron-right" class="w-[18px] h-[18px]"></i>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Presentation Logic
+        let currentSlide = 0;
+        const totalSlides = 5;
+
+        function showSlide(index) {
+            // Update Slides
+            for (let i = 0; i < totalSlides; i++) {
+                const slide = document.getElementById(`slide-${i}`);
+                if (i === index) {
+                    slide.classList.remove('hidden');
+                    // Small delay to allow display block to apply before animating opacity/transform
+                    setTimeout(() => {
+                        slide.classList.remove('opacity-0', 'translate-x-8');
+                        slide.classList.add('opacity-100', 'translate-x-0');
+                    }, 20);
+                } else {
+                    slide.classList.add('opacity-0', 'translate-x-8');
+                    slide.classList.remove('opacity-100', 'translate-x-0');
+                    // Wait for animation to finish before hiding completely
+                    setTimeout(() => {
+                        if (currentSlide !== i) {
+                            slide.classList.add('hidden');
+                        }
+                    }, 500);
+                }
+            }
+
+            // Update Dots
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-slate-300', 'hover:bg-slate-400', 'w-2.5');
+                    dot.classList.add('bg-rose-500', 'w-6');
+                } else {
+                    dot.classList.remove('bg-rose-500', 'w-6');
+                    dot.classList.add('bg-slate-300', 'hover:bg-slate-400', 'w-2.5');
+                }
+            });
+
+            // Update Counter
+            document.getElementById('slide-counter').innerText = `Slide ${index + 1} of ${totalSlides}`;
+
+            // Update Buttons
+            document.getElementById('prev-btn').disabled = index === 0;
+            
+            const nextBtn = document.getElementById('next-btn');
+            const nextText = document.getElementById('next-text');
+            if (index === totalSlides - 1) {
+                nextBtn.disabled = true;
+                nextText.innerText = 'Ende';
+            } else {
+                nextBtn.disabled = false;
+                nextText.innerText = 'Next';
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        function goToSlide(index) {
+            if (index >= 0 && index < totalSlides && index !== currentSlide) {
+                currentSlide = index;
+                showSlide(currentSlide);
+            }
+        }
+
+        // Initialize first slide on load
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(0);
+        });
+    </script>
+</body>
+</html>

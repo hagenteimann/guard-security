@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.pexels.com)",
+      "WebFetch(domain:pixabay.com)",
+      "Bash(curl -I --max-time 5 \"https://images.pexels.com/photos/7388699/pexels-photo-7388699.jpeg\")",
+      "Bash(for url:*)",
+      "Bash(do)",
+      "Bash(echo \"Testing: $url\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP Status: %{http_code}\\\\n\" \"$url\" --max-time 10)",
+      "Bash(done)",
+      "Bash(\"/c/Users/Hagen/.claude/projects/C--Users-Hagen-Desktop-Buiness-Kunden-guard-security/memory/MEMORY.md\":*)",
+      "Read(//c/Users/Hagen/.claude/projects/C--Users-Hagen-Desktop-Buiness-Kunden-guard-security/memory/**)",
+      "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"Add GitHub Pages deployment & accessibility improvements:*)"
+    ]
+  }
+}
